@@ -7003,6 +7003,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C1" library="resistor" deviceset="C-US" device="C0402"/>
 <part name="C2" library="resistor" deviceset="C-US" device="C0402"/>
 <part name="C4" library="resistor" deviceset="C-US" device="C0402"/>
+<part name="R10" library="resistor" deviceset="R-US_" device="R0402" value="10k"/>
+<part name="R11" library="resistor" deviceset="R-US_" device="R0402" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -7025,6 +7027,7 @@ Source: AVX .. aphvc.pdf</description>
 connect inputs to ground, 
 sense to Vo, and 
 leave Ref open-circuit."</text>
+<text x="-121.92" y="363.22" size="1.778" layer="97">I2C pull-up resistors</text>
 </plain>
 <instances>
 <instance part="U5" gate="G$1" x="-71.12" y="180.34"/>
@@ -7056,6 +7059,8 @@ leave Ref open-circuit."</text>
 <instance part="C1" gate="G$1" x="-210.82" y="317.5"/>
 <instance part="C2" gate="G$1" x="-210.82" y="345.44"/>
 <instance part="C4" gate="G$1" x="-185.42" y="345.44"/>
+<instance part="R10" gate="G$1" x="-116.84" y="350.52" rot="R90"/>
+<instance part="R11" gate="G$1" x="-96.52" y="350.52" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -7647,6 +7652,14 @@ leave Ref open-circuit."</text>
 <junction x="-185.42" y="320.04"/>
 <label x="-177.8" y="320.04" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-116.84" y1="355.6" x2="-116.84" y2="358.14" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="358.14" x2="-96.52" y2="358.14" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="358.14" x2="-96.52" y2="355.6" width="0.1524" layer="91"/>
+<label x="-109.22" y="358.14" size="1.778" layer="95"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="SDA_BIRD" class="0">
 <segment>
@@ -7683,6 +7696,12 @@ leave Ref open-circuit."</text>
 <wire x1="-81.28" y1="256.54" x2="-93.98" y2="256.54" width="0.1524" layer="91"/>
 <label x="-93.98" y="256.54" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-116.84" y1="345.44" x2="-116.84" y2="342.9" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="342.9" x2="-129.54" y2="342.9" width="0.1524" layer="91"/>
+<label x="-129.54" y="342.9" size="1.778" layer="95"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="SCL_RIG" class="0">
 <segment>
@@ -7694,6 +7713,12 @@ leave Ref open-circuit."</text>
 <pinref part="X1" gate="G$1" pin="22"/>
 <wire x1="-81.28" y1="254" x2="-93.98" y2="254" width="0.1524" layer="91"/>
 <label x="-93.98" y="254" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-96.52" y1="345.44" x2="-96.52" y2="342.9" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="342.9" x2="-81.28" y2="342.9" width="0.1524" layer="91"/>
+<label x="-91.44" y="342.9" size="1.778" layer="95"/>
+<pinref part="R11" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

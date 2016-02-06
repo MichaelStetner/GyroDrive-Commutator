@@ -26,7 +26,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
@@ -1443,6 +1443,22 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
+<package name="R0402">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
+<wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.483" x2="1.473" y2="0.483" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.483" x2="1.473" y2="-0.483" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.483" x2="-1.473" y2="-0.483" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.483" x2="-1.473" y2="0.483" width="0.0508" layer="39"/>
+<smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
+<smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
+<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
 </packages>
 </library>
 <library name="michael-stetner">
@@ -1558,7 +1574,7 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="OSHPark-4layer">
+<designrules name="OSHPark-4layer *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -1622,7 +1638,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="mlMaxStopFrame" value="2.5mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="30mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1791,7 +1807,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="X1" library="michael-stetner" package="190-025-163R001" value="NORCOMP-DB25-SMD-MALE" x="0" y="38.1" rot="R90"/>
 <element name="U3" library="michael-stetner" package="SC70" value="5V" x="11.176" y="66.421" smashed="yes">
-<attribute name="NAME" x="11.176" y="68.072" size="1.27" layer="25" rot="R90" align="center-left"/>
+<attribute name="NAME" x="11.176" y="62.0268" size="1.27" layer="25" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="10.414" y="66.167" size="0.4064" layer="27"/>
 </element>
 <element name="U2" library="PCA9517" package="SO-08" value="PCA9517" x="18.415" y="70.8914" smashed="yes" rot="R90">
@@ -1799,7 +1815,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="20.32" y="74.8284" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="U4" library="michael-stetner" package="SC70" value="2.5V" x="25.2476" y="66.421" smashed="yes">
-<attribute name="NAME" x="25.2476" y="68.072" size="1.27" layer="25" rot="R90" align="center-left"/>
+<attribute name="NAME" x="25.3492" y="62.0268" size="1.27" layer="25" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="24.4856" y="66.167" size="0.4064" layer="27"/>
 </element>
 <element name="C3" library="resistor" package="C0402" value="" x="9.144" y="66.421" smashed="yes" rot="R270">
@@ -1817,6 +1833,14 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C4" library="resistor" package="C0402" value="" x="23.2156" y="66.421" smashed="yes" rot="R270">
 <attribute name="NAME" x="23.2156" y="64.9224" size="1.27" layer="25" rot="R270" align="center-left"/>
 <attribute name="VALUE" x="21.3106" y="67.056" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R10" library="resistor" package="R0402" value="10k" x="14.0462" y="72.1868" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.5128" y="73.2282" size="1.27" layer="25" rot="R270" align="top-center"/>
+<attribute name="VALUE" x="15.9512" y="71.5518" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R11" library="resistor" package="R0402" value="10k" x="12.6492" y="69.6722" smashed="yes" rot="R270">
+<attribute name="NAME" x="11.7602" y="68.5038" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="10.7442" y="70.3072" size="1.27" layer="27" rot="R270"/>
 </element>
 </elements>
 <signals>
@@ -2327,9 +2351,11 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U2" pad="5"/>
 <contactref element="U3" pad="5"/>
 <contactref element="C3" pad="1"/>
-<wire x1="15.815" y1="72.7964" x2="9.398" y2="72.7964" width="0.4064" layer="1"/>
+<wire x1="15.815" y1="72.7964" x2="14.7574" y2="72.7964" width="0.4064" layer="1"/>
+<wire x1="14.7574" y1="72.7964" x2="9.398" y2="72.7964" width="0.4064" layer="1"/>
 <wire x1="9.398" y1="72.7964" x2="9.286" y2="72.7964" width="0.4064" layer="1"/>
-<wire x1="15.815" y1="68.9864" x2="9.286" y2="68.9864" width="0.4064" layer="1"/>
+<wire x1="15.815" y1="68.9864" x2="11.9888" y2="68.9864" width="0.4064" layer="1"/>
+<wire x1="11.9888" y1="68.9864" x2="9.286" y2="68.9864" width="0.4064" layer="1"/>
 <wire x1="9.286" y1="68.9864" x2="9.286" y2="72.6844" width="0.4064" layer="1"/>
 <wire x1="9.286" y1="72.6844" x2="9.398" y2="72.7964" width="0.4064" layer="1"/>
 <wire x1="9.286" y1="68.9864" x2="9.286" y2="67.818" width="0.4064" layer="1"/>
@@ -2337,6 +2363,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="9.286" y1="67.213" x2="9.144" y2="67.071" width="0.4064" layer="1"/>
 <wire x1="10.526" y1="67.246" x2="10.526" y2="67.818" width="0.254" layer="1"/>
 <wire x1="10.526" y1="67.818" x2="9.286" y2="67.818" width="0.254" layer="1"/>
+<contactref element="R10" pad="2"/>
+<contactref element="R11" pad="2"/>
+<wire x1="14.0462" y1="72.8368" x2="14.7574" y2="72.8368" width="0.4064" layer="1"/>
+<wire x1="14.7574" y1="72.8368" x2="14.7574" y2="72.7964" width="0.4064" layer="1"/>
+<wire x1="12.6492" y1="69.0222" x2="12.6238" y2="68.9714" width="0.4064" layer="1"/>
+<wire x1="12.6238" y1="68.9714" x2="11.9888" y2="68.9864" width="0.4064" layer="1"/>
 </signal>
 <signal name="SDA_BIRD">
 <contactref element="U2" pad="3"/>
@@ -2366,13 +2398,15 @@ Please make sure your boards conform to these design rules.</description>
 <via x="6.1214" y="33.9344" extent="1-16" drill="0.6"/>
 <wire x1="6.1214" y1="33.9344" x2="7.112" y2="33.9344" width="0.4064" layer="16"/>
 <wire x1="7.112" y1="33.9344" x2="7.112" y2="68.961" width="0.4064" layer="16"/>
-<wire x1="15.815" y1="71.5264" x2="13.0556" y2="71.5264" width="0.4064" layer="1"/>
-<wire x1="13.0556" y1="71.5264" x2="13.0302" y2="71.501" width="0.4064" layer="1"/>
-<via x="13.0302" y="71.501" extent="1-16" drill="0.6"/>
-<wire x1="13.0302" y1="71.501" x2="12.8016" y2="71.501" width="0.4064" layer="16"/>
+<wire x1="15.815" y1="71.5264" x2="12.8524" y2="71.5264" width="0.4064" layer="1"/>
+<via x="12.8524" y="71.5264" extent="1-16" drill="0.6"/>
+<wire x1="12.8524" y1="71.5264" x2="12.8016" y2="71.501" width="0.4064" layer="16"/>
 <wire x1="12.8016" y1="71.501" x2="11.2014" y2="69.9008" width="0.4064" layer="16"/>
 <wire x1="11.2014" y1="69.9008" x2="7.239" y2="69.8754" width="0.4064" layer="16"/>
 <wire x1="7.239" y1="69.8754" x2="7.112" y2="68.961" width="0.4064" layer="16"/>
+<contactref element="R10" pad="1"/>
+<wire x1="14.0462" y1="71.5368" x2="13.0302" y2="71.5368" width="0.4064" layer="1"/>
+<wire x1="13.0302" y1="71.5368" x2="12.8524" y2="71.5264" width="0.4064" layer="1"/>
 </signal>
 <signal name="SCL_RIG">
 <contactref element="U2" pad="7"/>
@@ -2382,11 +2416,15 @@ Please make sure your boards conform to these design rules.</description>
 <via x="4.8768" y="31.1658" extent="1-16" drill="0.6"/>
 <wire x1="4.8768" y1="31.1658" x2="5.08" y2="31.1658" width="0.4064" layer="16"/>
 <wire x1="5.08" y1="31.1658" x2="5.08" y2="70.0278" width="0.4064" layer="16"/>
-<wire x1="15.815" y1="70.2564" x2="11.9126" y2="70.2564" width="0.4064" layer="1"/>
+<wire x1="15.815" y1="70.2564" x2="12.0904" y2="70.2564" width="0.4064" layer="1"/>
+<wire x1="12.0904" y1="70.2564" x2="11.9126" y2="70.2564" width="0.4064" layer="1"/>
 <wire x1="11.9126" y1="70.2564" x2="10.7442" y2="71.4502" width="0.4064" layer="1"/>
 <via x="10.7442" y="71.4502" extent="1-16" drill="0.6"/>
 <wire x1="10.7442" y1="71.4502" x2="6.731" y2="71.4502" width="0.4064" layer="16"/>
 <wire x1="6.731" y1="71.4502" x2="5.08" y2="70.0278" width="0.4064" layer="16"/>
+<contactref element="R11" pad="1"/>
+<wire x1="12.6492" y1="70.3222" x2="12.6492" y2="70.246" width="0.4064" layer="1"/>
+<wire x1="12.6492" y1="70.246" x2="12.0904" y2="70.2564" width="0.4064" layer="1"/>
 </signal>
 </signals>
 </board>
