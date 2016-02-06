@@ -588,16 +588,6 @@ Dual, Low Power, G = 10, 100</description>
 <smd name="D" x="-1.524" y="-2.4638" dx="1.1176" dy="1.6002" layer="1" rot="R90"/>
 <text x="-1.651" y="1.143" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 </package>
-<package name="R0805ELM">
-<wire x1="-2.032" y1="1.016" x2="2.032" y2="1.016" width="0.127" layer="21"/>
-<wire x1="2.032" y1="1.016" x2="2.032" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="2.032" y1="-1.016" x2="-2.032" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="-2.032" y1="-1.016" x2="-2.032" y2="1.016" width="0.127" layer="21"/>
-<smd name="1" x="-1.397" y="0" dx="1.27" dy="1.905" layer="1"/>
-<smd name="2" x="1.397" y="0" dx="1.27" dy="1.905" layer="1"/>
-<text x="-1.778" y="1.27" size="1.016" layer="25" ratio="15">&gt;NAME</text>
-<text x="0.0254" y="0" size="1.016" layer="27" ratio="15" rot="R270" align="center">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="HALL_SENSOR">
@@ -606,32 +596,6 @@ Dual, Low Power, G = 10, 100</description>
 <pin name="B" x="12.7" y="5.08" length="middle" rot="R180"/>
 <pin name="C" x="12.7" y="-5.08" length="middle" rot="R180"/>
 <pin name="D" x="-12.7" y="-5.08" length="middle"/>
-</symbol>
-<symbol name="R-US">
-<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="C-US">
-<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="1.016" y1="0" x2="1.0161" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.0161" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="1" y1="0" x2="1.8542" y2="2.4892" width="0.254" layer="94" curve="-37.878202"/>
-<wire x1="1.8504" y1="-2.4668" x2="1.0161" y2="0" width="0.254" layer="94" curve="-37.373024"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-1.27" y="3.175" size="1.778" layer="95">&gt;NAME</text>
-<text x="-1.27" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -646,38 +610,6 @@ Dual, Low Power, G = 10, 100</description>
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="C" pad="C"/>
 <connect gate="G$1" pin="D" pad="D"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="R0805ELM">
-<gates>
-<gate name="G$1" symbol="R-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="R0805ELM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="C0805ELM">
-<gates>
-<gate name="G$1" symbol="C-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="R0805ELM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6976,9 +6908,6 @@ Source: AVX .. aphvc.pdf</description>
 <parts>
 <part name="U5" library="burr-brown" deviceset="INA2141" device="U"/>
 <part name="U6" library="burr-brown" deviceset="INA2141" device="U"/>
-<part name="R1" library="elm" deviceset="R0805ELM" device="" value="10k"/>
-<part name="C5" library="elm" deviceset="C0805ELM" device="" value="100nF"/>
-<part name="C6" library="elm" deviceset="C0805ELM" device="" value="100nF"/>
 <part name="X2" library="pinhead" deviceset="PINHD-2X8" device=""/>
 <part name="U1" library="elm" deviceset="HALL_ON_SIDE" device="" value="HALL"/>
 <part name="U7" library="burr-brown" deviceset="INA2141" device="U"/>
@@ -7005,6 +6934,9 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C4" library="resistor" deviceset="C-US" device="C0402"/>
 <part name="R10" library="resistor" deviceset="R-US_" device="R0402" value="10k"/>
 <part name="R11" library="resistor" deviceset="R-US_" device="R0402" value="10k"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="C5" library="resistor" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C6" library="resistor" deviceset="C-US" device="C0805" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -7032,9 +6964,6 @@ leave Ref open-circuit."</text>
 <instances>
 <instance part="U5" gate="G$1" x="-71.12" y="180.34"/>
 <instance part="U6" gate="G$1" x="-73.66" y="116.84"/>
-<instance part="R1" gate="G$1" x="-203.2" y="38.1" rot="R180"/>
-<instance part="C5" gate="G$1" x="-213.36" y="81.28"/>
-<instance part="C6" gate="G$1" x="-213.36" y="63.5"/>
 <instance part="X2" gate="A" x="-195.58" y="205.74"/>
 <instance part="U1" gate="G$1" x="-193.04" y="172.72"/>
 <instance part="U7" gate="G$1" x="-73.66" y="53.34"/>
@@ -7061,16 +6990,18 @@ leave Ref open-circuit."</text>
 <instance part="C4" gate="G$1" x="-185.42" y="345.44"/>
 <instance part="R10" gate="G$1" x="-116.84" y="350.52" rot="R90"/>
 <instance part="R11" gate="G$1" x="-96.52" y="350.52" rot="R90"/>
+<instance part="R1" gate="G$1" x="-203.2" y="38.1"/>
+<instance part="C5" gate="G$1" x="-213.36" y="81.28" rot="R90"/>
+<instance part="C6" gate="G$1" x="-213.36" y="63.5" rot="R90"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="V-" class="0">
 <segment>
-<pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="-215.9" y1="63.5" x2="-220.98" y2="63.5" width="0.1524" layer="91"/>
 <label x="-218.44" y="63.5" size="1.778" layer="95"/>
-<junction x="-215.9" y="63.5"/>
+<pinref part="C6" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <label x="-45.72" y="93.98" size="1.778" layer="95"/>
@@ -7118,14 +7049,13 @@ leave Ref open-circuit."</text>
 </segment>
 <segment>
 <wire x1="-223.52" y1="38.1" x2="-208.28" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
 <label x="-220.98" y="38.1" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="-215.9" y1="81.28" x2="-220.98" y2="81.28" width="0.1524" layer="91"/>
 <label x="-220.98" y="81.28" size="1.778" layer="95"/>
-<junction x="-215.9" y="81.28"/>
+<pinref part="C5" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U7" gate="G$1" pin="V+"/>
@@ -7200,10 +7130,9 @@ leave Ref open-circuit."</text>
 </net>
 <net name="V+_HALL" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="-198.12" y1="38.1" x2="-182.88" y2="38.1" width="0.1524" layer="91"/>
 <label x="-190.5" y="38.1" size="1.778" layer="95"/>
-<junction x="-198.12" y="38.1"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="-167.64" y1="167.64" x2="-180.34" y2="167.64" width="0.1524" layer="91"/>
@@ -7423,16 +7352,14 @@ leave Ref open-circuit."</text>
 <wire x1="-55.88" y1="101.6" x2="-35.56" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-208.28" y1="81.28" x2="-200.66" y2="81.28" width="0.1524" layer="91"/>
 <label x="-203.2" y="81.28" size="1.778" layer="95"/>
-<junction x="-208.28" y="81.28"/>
+<pinref part="C5" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="-208.28" y1="63.5" x2="-198.12" y2="63.5" width="0.1524" layer="91"/>
 <label x="-203.2" y="63.5" size="1.778" layer="95"/>
-<junction x="-208.28" y="63.5"/>
+<pinref part="C6" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="-220.98" y1="177.8" x2="-205.74" y2="177.8" width="0.1524" layer="91"/>
