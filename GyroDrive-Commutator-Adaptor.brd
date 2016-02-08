@@ -1769,7 +1769,9 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="OC_FARNELL" value="1459468" x="-30.734" y="40.6908" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="X2" library="pinhead" package="2X08" value="" x="27.178" y="38.1" rot="R90"/>
-<element name="U1" library="elm" package="HALL_ON_SIDE" value="HALL" x="102.87" y="38.1"/>
+<element name="U1" library="elm" package="HALL_ON_SIDE" value="HALL" x="102.87" y="38.1" smashed="yes">
+<attribute name="NAME" x="101.219" y="39.3954" size="1.27" layer="25" ratio="10"/>
+</element>
 <element name="U7" library="burr-brown" package="SO16-1" value="INA2141U" x="14.986" y="49.3014" rot="R180">
 <attribute name="OC_NEWARK" value="74C9853" x="-4.064" y="87.4014" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="INA2141U" x="-4.064" y="87.4014" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1777,29 +1779,29 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="OC_FARNELL" value="1459468" x="-4.064" y="87.4014" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="R2" library="resistor" package="R0805" value="357k" x="19.1008" y="20.066" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.1008" y="21.1074" size="1.27" layer="25" rot="R270" align="center-right"/>
+<attribute name="NAME" x="17.7292" y="21.4122" size="1.27" layer="25" rot="R270" align="center-right"/>
 <attribute name="VALUE" x="19.7358" y="22.606" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R6" library="resistor" package="R0805" value="3.6k" x="15.0622" y="20.066" smashed="yes">
-<attribute name="NAME" x="15.0368" y="21.1074" size="1.27" layer="25" rot="R90" align="center-left"/>
+<attribute name="NAME" x="13.3858" y="21.4376" size="1.27" layer="25" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="14.4272" y="17.526" size="1.27" layer="27"/>
 </element>
 <element name="R3" library="resistor" package="R0805" value="357k" x="19.1262" y="4.8006" rot="R180"/>
 <element name="R7" library="resistor" package="R0805" value="3.6k" x="15.0876" y="4.8006" rot="R180"/>
 <element name="R4" library="resistor" package="R0805" value="357k" x="19.1262" y="26.7208" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.1262" y="25.6794" size="1.27" layer="25" rot="R270" align="center-left"/>
+<attribute name="NAME" x="19.8882" y="25.4762" size="1.27" layer="25" rot="R270" align="center-left"/>
 <attribute name="VALUE" x="19.7612" y="29.2608" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R8" library="resistor" package="R0805" value="3.6k" x="15.0622" y="26.7208" smashed="yes" rot="R180">
-<attribute name="NAME" x="15.0622" y="25.6794" size="1.27" layer="25" rot="R270" align="center-left"/>
+<attribute name="NAME" x="15.2146" y="25.3746" size="1.27" layer="25" rot="R270" align="center-left"/>
 <attribute name="VALUE" x="15.6972" y="29.2608" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R5" library="resistor" package="R0805" value="357k" x="19.1262" y="56.9214" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.1262" y="57.9628" size="1.27" layer="25" rot="R270" align="center-right"/>
+<attribute name="NAME" x="19.1262" y="58.1914" size="1.27" layer="25" rot="R270" align="center-right"/>
 <attribute name="VALUE" x="19.7612" y="59.4614" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R9" library="resistor" package="R0805" value="3.6k" x="15.0622" y="56.9214" smashed="yes" rot="R180">
-<attribute name="NAME" x="15.0622" y="57.9628" size="1.27" layer="25" rot="R270" align="center-right"/>
+<attribute name="NAME" x="15.0622" y="58.1914" size="1.27" layer="25" rot="R270" align="center-right"/>
 <attribute name="VALUE" x="15.6972" y="59.4614" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="X1" library="michael-stetner" package="190-025-163R001" value="NORCOMP-DB25-SMD-MALE" x="0" y="38.1" rot="R90"/>
@@ -1832,11 +1834,11 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="21.3106" y="67.056" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="R10" library="resistor" package="R0402" value="10k" x="14.0462" y="72.1868" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.5128" y="73.2282" size="1.27" layer="25" rot="R270" align="top-center"/>
+<attribute name="NAME" x="13.0048" y="73.2028" size="1.27" layer="25" rot="R270" align="top-center"/>
 <attribute name="VALUE" x="15.9512" y="71.5518" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R11" library="resistor" package="R0402" value="10k" x="12.6492" y="69.6722" smashed="yes" rot="R270">
-<attribute name="NAME" x="11.7602" y="68.5038" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="11.6078" y="69.723" size="1.27" layer="25" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="10.7442" y="70.3072" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="R1" library="resistor" package="R0805" value="10k" x="55.372" y="34.163"/>
@@ -1846,9 +1848,15 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="5.715" y="18.4404" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C7" library="resistor" package="C0805" value="100nF" x="8.3566" y="29.1846" rot="R90"/>
-<element name="C8" library="resistor" package="C0805" value="100nF" x="8.6106" y="38.1508" rot="R270"/>
+<element name="C8" library="resistor" package="C0805" value="100nF" x="8.6106" y="38.1508" smashed="yes" rot="R270">
+<attribute name="NAME" x="7.366" y="38.1508" size="1.27" layer="25" rot="R270" align="top-center"/>
+<attribute name="VALUE" x="6.0706" y="39.4208" size="1.27" layer="27" rot="R270"/>
+</element>
 <element name="C9" library="resistor" package="C0805" value="100nF" x="8.382" y="44.1198" rot="R90"/>
-<element name="C10" library="resistor" package="C0805" value="100nF" x="8.3566" y="54.483" rot="R270"/>
+<element name="C10" library="resistor" package="C0805" value="100nF" x="8.3566" y="54.483" smashed="yes" rot="R270">
+<attribute name="NAME" x="6.9342" y="54.483" size="1.27" layer="25" rot="R270" align="top-center"/>
+<attribute name="VALUE" x="5.8166" y="55.753" size="1.27" layer="27" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="V-">
